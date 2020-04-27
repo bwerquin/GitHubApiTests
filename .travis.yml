@@ -15,4 +15,5 @@ script:
   - yarn
 
 after_success:
+    - echo ${TRAVIS_REPO_SLUG}
     - .ci/comment-pr.sh
