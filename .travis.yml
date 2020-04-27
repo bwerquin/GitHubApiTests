@@ -1,0 +1,18 @@
+language: node_js
+
+services:
+  - docker
+
+sudo: required
+
+node_js:
+  - 12.16.1
+
+cache: yarn
+
+script:
+  - cd ui
+  - yarn
+
+after_success:
+    - .ci/comment-pr.sh
