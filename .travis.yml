@@ -10,6 +10,9 @@ node_js:
 
 cache: yarn
 
+before_install:
+  - chmod +x .ci/comment-pr.sh
+
 script:
   - cd ui
   - yarn
