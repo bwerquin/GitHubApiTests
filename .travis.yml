@@ -16,4 +16,5 @@ script:
 
 after_success:
     - echo ${TRAVIS_REPO_SLUG}
+    - cd ..
     - .ci/comment-pr.sh
